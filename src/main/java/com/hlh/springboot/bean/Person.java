@@ -3,6 +3,7 @@ package com.hlh.springboot.bean;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 import org.hibernate.validator.constraints.Email;
@@ -18,9 +19,10 @@ import java.util.Map;
  *
  */
 
+@PropertySource(value = {"classpath:person.properties"})
 @Data
 @Component
-//@ConfigurationProperties(prefix = "person")
+@ConfigurationProperties(prefix = "person")
 //@Validated
 public class Person {
    // @Value("${person.last-name}")
