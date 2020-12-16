@@ -18,7 +18,7 @@ class SpringBoot02ConfigApplicationTests {
     @Autowired
     Person person;
 
-    @Autowired
+  /*  @Autowired
     ApplicationContext ioc;
 
     @Test
@@ -26,7 +26,7 @@ class SpringBoot02ConfigApplicationTests {
        boolean b = ioc.containsBean("helloService");
         System.out.println(b);
     }
-
+*/
     @Test
     void contextLoads() {
         System.out.println(person);
